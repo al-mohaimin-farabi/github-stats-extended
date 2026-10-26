@@ -52,15 +52,15 @@ function calculateRank({
   followers: number;
 }): { level: string; percentile: number } {
   const COMMITS_MEDIAN = all_commits ? 1000 : 250,
-    COMMITS_WEIGHT = 2;
+    COMMITS_WEIGHT = 9;
   const PRS_MEDIAN = 50,
-    PRS_WEIGHT = 3;
+    PRS_WEIGHT = 1;
   const ISSUES_MEDIAN = 25,
-    ISSUES_WEIGHT = 1;
+    ISSUES_WEIGHT = 0.5;
   const REVIEWS_MEDIAN = 2,
-    REVIEWS_WEIGHT = 1;
+    REVIEWS_WEIGHT = 0.5;
   const STARS_MEDIAN = 50,
-    STARS_WEIGHT = 4;
+    STARS_WEIGHT = 0.5;
   const FOLLOWERS_MEDIAN = 10,
     FOLLOWERS_WEIGHT = 1;
 
